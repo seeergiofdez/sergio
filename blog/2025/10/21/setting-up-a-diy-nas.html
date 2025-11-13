@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- Copyright (C) 2025 The BBJProjeK Organization -->
+
+<html lang="en">
+<head>
+  <title>Setting up a Low-power DIY NAS</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The concept of airplane mode on mobile phones is just wrong" />
+  <meta name="author" content="Sergio Fernández" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/main.css" />
+
+</head>
+<body>
+  <header class="header">
+    <a class="title" href="/"><h1>sergio's blog</h1></a>
+    <nav><h2 class="hdn">...hi, this is sergi</h2><img height="50px" src="/assets/ahhyess.svg">
+      <p><a href="/">home</a> <a href="/archive">archive</a> <a href="/blog/">blog</a> <a href="/colophon">colophon</a></p>
+    </nav>
+  </header>
+
+  <h1>Setting up a Low-power DIY NAS</h1>
+  <time>Oct 21, 2025</time>
+
+  <h2>The need</h2>
+  <p>The first motivation to setup something like this was the needed to share and access files, photos and text between devices. I tried different services, apps and tools but I always ended up missing something from them. So with something like a NAS would fix the problem.</p>
+  <p>Also, the NAS would allow me not only to share files, but also to store them, so I could just upload things there, and get back to them days later from another device.</p>
+
+  <h2>Simple NAS</h2>
+  <p>After looking for some NAS solution, I always ended up on forums saying that you need 64GB of RAM, a powerful CPU, and some good OS like TrueNAS, and got really confused about it. But after some research and self-tests, I've just realized that I just wanted a simple place to store, upload and get files, not more shit.</p>
+  <h3>Even a USB on a router would make the job</h3>
+  <p>Even that would be alright, but I just wanted a little bit more speed for the NAS. Also, my router doesn't even support SMB2+ and it requires authentication, and those are two requirements for me. So, option not valid.</p>
+  <p>After some research I ended up with the most simple idea; running a Windows PC to use it as a NAS. I was already kind of using this feature on my main PC to grab files from it to my phone using SMB, via sharing my userprofile folder to the network... but didn't want to leave my main pc always on, or ready to wake with WoL.</p>
+  <img class="noradius" src="https://u.cubeupload.com/bbjprojek/HNLtu6.png">
+
+  <h2>The setup</h2>
+  <p>So the setup of my "NAS", if we can call it that way, was pretty easy, with more than enough hardware for the usage. It's a mini PC with an Intel Core I5-6500T and 8GB of RAM with two NVMe drives.</p>
+  <p>The OS I used was <a target="_blank" href="https://wiki.bbjprojek.org/blog/2025/03/29/windows-10-anniversary-update-checklist/">Windows 10 2016 LTSB</a>, the Windows version I always install as many already know. This version of Windows is the only who doesn't give me any problem since I started using back in 2022, and the performance is just great.</p>
+  <p>After setting up the OS, cleaning it up, and disabling unnecessary services (like Windows Audio, etc), I created a folder inside the C:\ directory, shared it on the network, and technically we already have a working NAS over the network via SMB3.</p>
+  <p>I also made sure to tweak some things in the power control to minimize the power usage of the NAS. I've limited the CPU to run at its lowest speed, around 700MHz, and also allowed the server to sleep after 200 mins of inactivity (make sure to enable Wake on LAN). Server uses around 4W in idle, and less than 1W when sleeping, so this way our NAS doesn't even have an impact on the electricity bill.</p>
+  <p>The next thing I did was disabling the authentication for accessing the NAS. Although this seems like a security issue, I don't really mind anyone accessing this server, as I won't be hosting any personal stuff out there, and by disablign authentication you usually get faster access to the folders (tested with VLC, SolidExplorer in Android, and even when mapping a network drive in Windows).</p>
+
+  <h2>Tweaks</h2>
+  <p>Writing it for the record, in case I need to set something similar in the future...</p>
+  <p>To disable authentication</p>
+  <pre><code>Set-SmbClientConfiguration -RequireSecuritySignature $false
+Set-SmbServerConfiguration -RequireSecuritySignature $false</code></pre>
+
+  <p>Make sure we allow insecure log ins:</p>
+  <pre><code>- Go to gpedit.msc.
+- Navigate to Computer Configuration > Administrative Templates >*Network** > Lanman Workstation.
+- Enable "Enable insecure guest logons".
+- Apply and restart.</code></pre>
+
+  <p>More info: <a target="_blank" href="https://learn.microsoft.com/en-us/windows-server/storage/file-server/smb-signing?tabs=powershell">https://learn.microsoft.com/en-us/windows-server/storage/file-server/smb-signing?tabs=powershell</a></p>
+  <p>When sharing the folder over the network, make sure to add the "Guest" user read/write permissions.</p>
+  <img class="noradius" src="https://u.cubeupload.com/bbjprojek/90Uuju.png">
+  <p><i>Folder permission we want to share over the NAS.</i></p>
+
+  <h2>Done</h2>
+  <p>I was surprised on how good this works. I mapped the network drive on my main PC so the NAS acts like a regular disk, being it as fast as any other drive on it (only limited via the 1gbps ethernet).</p>
+  <p>Also, on Android phone using Solid Explorer, and on iPhone using OwlFiles, the acess to the NAS is very intuitive and fast. VLC for mobile even support network discovering so I can watch films stored on NAS directly on my phone. Cheff kiss!</p>
+  <img class="noradius" src="https://u.cubeupload.com/bbjprojek/p30FDX.png">
+  <p><i>Mapped network drive on Windows 10.</i></p>
+
+  <footer>
+    <hr class="foot">
+    <p><a href="/">home</a> | <a href="/archive">archive</a></p>
+  </footer>
+</body>
+</html>
