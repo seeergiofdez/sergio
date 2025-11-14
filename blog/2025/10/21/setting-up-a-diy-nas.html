@@ -40,8 +40,8 @@
   <p>So the setup of my "NAS", if we can call it that way, was pretty easy, with more than enough hardware for the usage. It's a mini PC with an Intel Core I5-6500T and 8GB of RAM with two NVMe drives.</p>
   <p>The OS I used was <a target="_blank" href="https://wiki.bbjprojek.org/blog/2025/03/29/windows-10-anniversary-update-checklist/">Windows 10 2016 LTSB</a>, the Windows version I always install as many already know. This version of Windows is the only who doesn't give me any problem since I started using back in 2022, and the performance is just great.</p>
   <p>After setting up the OS, cleaning it up, and disabling unnecessary services (like Windows Audio, etc), I created a folder inside the C:\ directory, shared it on the network, and technically we already have a working NAS over the network via SMB3.</p>
-  <p>I also made sure to tweak some things in the power control to minimize the power usage of the NAS. I've limited the CPU to run at its lowest speed, around 700MHz, and also allowed the server to sleep after 200 mins of inactivity (make sure to enable Wake on LAN). Server uses around 4W in idle, and less than 1W when sleeping, so this way our NAS doesn't even have an impact on the electricity bill.</p>
-  <p>The next thing I did was disabling the authentication for accessing the NAS. Although this seems like a security issue, I don't really mind anyone accessing this server, as I won't be hosting any personal stuff out there, and by disablign authentication you usually get faster access to the folders (tested with VLC, SolidExplorer in Android, and even when mapping a network drive in Windows).</p>
+  <p>I also made sure to tweak some things in the power control to minimize the power usage of the NAS. I've limited the CPU to run at its lowest speed, around 700MHz, and also allowed the server to sleep after 200 mins of inactivity (make sure to enable Wake on LAN). Server uses around 4W in idle, and less than 1W when sleeping, so this way the NAS doesn't even have an impact on the electricity bill.</p>
+  <p>The next thing I did was disabling the authentication for accessing the NAS. Although this seems like a security issue, I don't really mind anyone accessing this server, as I won't be hosting any personal stuff out there, and by disabling authentication you usually get faster access to the folders (tested with VLC, SolidExplorer in Android, and even when mapping a network drive in Windows).</p>
 
   <h2>Tweaks</h2>
   <p>Writing it for the record, in case I need to set something similar in the future...</p>
@@ -62,7 +62,7 @@ Set-SmbServerConfiguration -RequireSecuritySignature $false</code></pre>
 
   <h2>Done</h2>
   <p>I was surprised on how good this works. I mapped the network drive on my main PC so the NAS acts like a regular disk, being it as fast as any other drive on it (only limited via the 1gbps ethernet).</p>
-  <p>Also, on Android phone using Solid Explorer, and on iPhone using OwlFiles, the acess to the NAS is very intuitive and fast. VLC for mobile even support network discovering so I can watch films stored on NAS directly on my phone. Cheff kiss!</p>
+  <p>Also, on Android phone using Solid Explorer, and on iPhone using OwlFiles, the acess to the NAS is very intuitive and fast. VLC for mobile even support network discovering so I can watch films stored on NAS directly on my phone. Chef kiss!</p>
   <img class="noradius" src="https://u.cubeupload.com/bbjprojek/p30FDX.png">
   <p><i>Mapped network drive on Windows 10.</i></p>
 
