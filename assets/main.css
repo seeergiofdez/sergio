@@ -154,7 +154,6 @@ code, tt {
 
 /* Links (With Transition) */
 a:link, nav a:link {
-  margin-left: 2px;
   display: inline-block;
   transition: transform var(--transition-duration) ease;
 }
