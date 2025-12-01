@@ -5,6 +5,7 @@ html {
   word-wrap: break-word;
   max-width: 800px;
   margin: auto;
+  overflow-y: scroll;
 }
 
 body {
