@@ -196,25 +196,25 @@ hr.foot {
 
 /* Heading & Keyframe Anim */
 h2.hdn, p.hdn {
-  margin: -10px auto 10px auto;
+  margin: -10px auto -10px auto;
 }
 
 @keyframes cursor-blink {
   50% {
-    content: "o";
+    content: "e";
     color: var(--heading);
     background: none;
   }
 
   100% {
-    content: "o";
+    content: "e";
     color: white;
     background: var(--background);
   }
 }
 
 h2.hdn::after {
-  content: "o";
+  content: "e";
   color: var(--heading);
   height: 30px;
   border-radius: 3px;
