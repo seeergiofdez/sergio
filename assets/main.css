@@ -18,8 +18,8 @@ body {
 :root {
   --foreground: #202020;
   --foreground-inv: #FFFFFF;
-  --branding: #7886CD;
-  --branding-op: #7886CD70;
+  --branding: #395542;
+  --branding-op: #39554270;
   --background: #FFFFFF;
   --background-alt: #F6F8FA;
   --heading: #404040;
@@ -34,8 +34,8 @@ body {
     color-scheme: dark;
     --foreground: #FFFFFF;
     --foreground-inv: #202020;
-    --branding: #7886CD;
-    --branding-op: #7886CD70;
+    --branding: #90D7A7;
+    --branding-op: #90D7A770;
     --background: #000000;
     --background-alt: #202020;
     --heading: #CCCCCC;
