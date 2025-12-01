@@ -159,8 +159,9 @@ a:link, nav a:link {
 }
 
 a:hover, nav a:hover {
-  transform: translateY(-1.5px);
-  filter: grayscale(1);
+  background-color: var(--branding);
+  color: var(--foreground-inv) !important;
+  transition: background-color .1s, color .1s;
 }
 
 a:link, a:visited {
