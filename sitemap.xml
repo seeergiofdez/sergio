@@ -37,12 +37,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://sergio.bbjprojek.org/blog/2025/09/02/disconnected</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>never</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://sergio.bbjprojek.org/blog/2025/10/21/setting-up-a-diy-nas</loc>
     <lastmod>2025-10-21</lastmod>
     <changefreq>never</changefreq>
@@ -57,12 +51,6 @@
   <url>
     <loc>https://sergio.bbjprojek.org/blog/2025/11/09/my-default-programs-2</loc>
     <lastmod>2025-11-09</lastmod>
-    <changefreq>never</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://sergio.bbjprojek.org/blog/2025/12/01/screen-time-number</loc>
-    <lastmod>2025-12-01</lastmod>
     <changefreq>never</changefreq>
     <priority>0.6</priority>
   </url>
