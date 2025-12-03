@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- Copyright (C) 2025 The BBJProjeK Organization -->
+
+<html lang="en">
+<head>
+  <title>Using Native Fonts</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The concept of airplane mode on mobile phones is just wrong" />
+  <meta name="author" content="Sergio Fernández" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/main.css" />
+
+</head>
+<body>
+  <header class="header">
+    <a class="title" href="/"><h1>sergio's blog</h1></a>
+    <nav><h2 class="hdn">sergio fdez's sit</h2>
+      <p><a href="/">home</a>&nbsp;&nbsp;<a href="/archive">archive</a>&nbsp;&nbsp;<a href="/blog/">blog</a>&nbsp;&nbsp;<a href="/colophon">colophon</a></p>
+    </nav>
+  </header>
+
+  <h1>Using Native Fonts</h1>
+  <time>Dec 4, 2025</time>
+
+  <p>Using custom fonts on your company's site is a good idea when you want your brand to be defined. Like Google using Google Sans, Wallapop using Wallie, or Twitter using Chirp.</p>
+  <p>But for personal sites, unless you really love a font, or have a good reason to use them, it's not always the best idea. Not only uses more bandwidth, but also sometimes custom fonts look odd on specific devices. I always choose to use native fonts when possible.</p>
+  <p>For example, this site uses the default font for every device. On iOS, you'll see San Francisco, on Android, you'll see Roboto and if you're on Windows, you'll probably be seeing Segoe UI. The site looks good, and consistent across the whole UI.</p>
+  <p>To use the default fonts I use the following declaration on CSS:</p>
+  <pre><code>body {
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}</code></pre>
+
+  <p>You can also use native monospace fonts for code blocks, etc. In this site, you'll see headings on monospace font:</p>
+<pre><code>code, tt {
+  font-size: 85%;
+  font-family: ui-monospace,SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}</code></pre>
+
+  <p>Fun fact: If you use bold font on iOS, you'll see my website on bold too, and that's something really cool, as the fonts are consistency across other apps from iOS, as if you were reading your notes app, or WhatsApp messages, etc. The only way to achieve that is by using native fonts.</p>
+
+
+  <footer>
+    <hr class="foot">
+    <p><a href="/">home</a> | <a href="/archive">archive</a></p>
+  </footer>
+</body>
+</html>
