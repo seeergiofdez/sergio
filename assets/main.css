@@ -71,18 +71,13 @@ ol > li::marker {
   font-weight: bold;
 }
 
-::selection {
+/* ::selection {
   color: var(--foreground);
   background: var(--branding);
-}
+} */
 
 img {
   max-width: 100%;
-  border-radius: 10px;
-}
-
-img.noradius {
-  border-radius: 0px;
 }
 
 /* Extra features */
@@ -152,16 +147,15 @@ code, tt {
   padding: 0;
 }
 
-/* Links (With Transition) */
-a:link, nav a:link {
+/* Links */
+a:link.title, nav a:link {
   display: inline-block;
-  transition: transform var(--transition-duration) ease;
 }
 
 a:hover, nav a:hover {
   background-color: var(--branding);
   color: var(--foreground-inv) !important;
-  transition: background-color .1s, color .1s;
+  /* transition: background-color .1s, color .1s; */
 }
 
 a:link, a:visited {
