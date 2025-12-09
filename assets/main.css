@@ -23,8 +23,8 @@ body {
   --background: #FFFFFF;
   --background-alt: #F6F8FA;
   --heading: #404040;
-  --ffamily: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  --ffamily-code: ui-monospace,SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  --ffamily: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --ffamily-code: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, "Liberation Mono", monospace;
   --border-radius: 4px;
 }
 
