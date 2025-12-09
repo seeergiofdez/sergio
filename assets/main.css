@@ -26,7 +26,6 @@ body {
   --ffamily: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   --ffamily-code: ui-monospace,SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
   --border-radius: 4px;
-  --transition-duration: 0.3s;
 }
 
 @media (prefers-color-scheme: dark) {
