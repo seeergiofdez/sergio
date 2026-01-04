@@ -1,5 +1,5 @@
 # Sergio's Index
-Sergio's personal page. Updated version of [Sergio's Personal Cabinet](https://gitlab.com/bbjprojek/cabinet). A lightweight and static html5 page for personal thoughts and posts.
+Sergio's personal page. Updated version of [Sergio's Personal Cabinet](https://ax.bbjprojek.org/bbjprojek/cabinet). A lightweight and static html5 page for personal thoughts and posts.
 
 ## Serving
 Install npm dependencies:
