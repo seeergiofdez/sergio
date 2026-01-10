@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- Copyright (C) 2026 The BBJProjeK Organization -->
+
+<html lang="en">
+<head>
+  <title>Adding Bluetooth A2DP compatibility to Ford 2007-2011 vehicles</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Updating Bluetooth connections on some Ford vehicles" />
+  <meta name="author" content="Sergio Fernández" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/main.css" />
+
+</head>
+<body>
+  <header class="header">
+    <a class="title" href="/"><h1>sergio's blog</h1></a>
+    <nav><h2 class="hdn">sergio fdez's sit</h2>
+      <p><a href="/">home</a>&nbsp;&nbsp;<a href="/archive">archive</a>&nbsp;&nbsp;<a href="/blog/">blog</a>&nbsp;&nbsp;<a href="/colophon">colophon</a></p>
+    </nav>
+  </header>
+
+  <h1>Adding Bluetooth A2DP compatibility to Ford 2007-2011 vehicles</h1>
+  <time>Jan 10, 2026</time>
+
+  <p>This conversion / upgrade can be done on most of the Ford Focus MK2.5, Ford Mondeo MK4 and MK4.5, Fiesta MK7, Kuga, Galaxy and other Ford vehicles that come up with Bluetooth hands-free option.</p>
+  <p>First generation modules allow using bluetooth but are restricted to calls-only. You can upgrade your system to allow sending music via bluetooth, and also via USB if you have an iPhone (as the module has iPod compatibility).</p>
+
+  <h2 id="prerequisites">Prerequisites</h2>
+  <p>Before you start with the upgrade, make sure your radio and wiring is compatible with the new modules. To know this, you can either check your current module ref, and if you have the Sony radio, check the manuf. date.</p>
+  <p><b>Compatible:</b></p>
+  <p>If you have a Sony radio manufactered after June 2008, or if you have the following modules:</p>
+  <p><pre><code>7S7T-19G488-XX<br>8M5T-19G488-XX<br>8M5T-19C112-XX</code></pre></p>
+
+  <p><b>Not compatible:</b></p>
+  <p>If you have a Sony radio before April 2008 and 2007.</p>
+  <p>If you have one of these modules:</p>
+  <p><pre><code>7M5T-19G488-XX<br>4M5T-19G488-XX</code></pre></p>
+  <p>The previous modules are also labelled as "RX-1C". Meaning it allows mono-audio only. These will not be compatible, and requires wiring update, and most likely radio upgrade too. It can be done, but requires more work. This upgrade is not explained here.</p>
+
+  <p>If you have a compatible module, you're elegible for this upgrade.</p>
+
+  <h2 id="module">Bluetooth module</h2>
+  <p>In order to make this upgrade, you will need a Bluetooth module that allows Bluetooth streaming. The modules with this feature are <b>8M5T-19C112-XX</b>.</p>
+
+  <p>The first X letter is the language of the module, before purchasing, make sure to choose your prefered language:</p>
+  <p><pre><code>8M5T-19C112-A* English<br>8M5T-19C112-B* German<br>8M5T-19C112-C* French<br>8M5T-19C112-D* Spanish<br>8M5T-19C112-E* Italian<br>8M5T-19C112-F* Portuguese<br>8M5T-19C112-J* Turkish</code></pre></p>
+
+  <p>The second letter is the revision of the module. The higher the letter, the most "new" the module is. It doesn't really matter which revision you get cause all are elegible for an update to fix issues and add iPod compatibility.</p>
+  <p>Have in mind that modules starting with 19C112-X(<b>M</b>) and before, have a propietary USB connection, check before adquiring a cable for USB. This is the same connector present is 8M5T-19G488.</p>
+  <p>Starting with 19C112-D(<b>N</b>), the connector is USB Mini B, now to be confused with Micro B, or Micro USB. You can get an official cable, or you can also get some cheap cable from any tech market or even Amazon.</p>
+
+  <p>You can <b>purchase a module on <a target="_blank" href="https://es.wallapop.com/search?category_id=12800&is_shippable=true&max_sale_price=40&keywords=8M5T-19C112&order_by=most_relevance&source=side_bar_filters">Wallapop</a></b>. You can also <a href="mailto:sergio@bbjprojek.org">contact me</a> if you need a module, or more information about compatibility or wiring</a>.</p>
+
+  <h2 id="replacing">Replacing the module</h2>
+  <p>Should be easy. The module in Focus and Mondeo is located inside the glovebox. You need to remove it to access the module. On the Mondeo, you need to unscrew a xxx and. On the Focus, you need to remove another part to get access to it.</p>
+  <p>With the radio OFF, replace the old module with the new one. Wait some seconds, and turn on the radio. You should be able to see bluetooth option pressing "CD/AUX" button on the Sony radio. Tap the "PHONE" option to link your phone with the radio.</p>
+
+  <h3>Gloveboxes</h3>
+  <p>Screws and location of the module in the Ford Focus MK2:</p>
+  <img width="100%" src="https://file.garden/aSn8DvQ-tgO2sRN7/sergio/focus_mk2.webp">
+
+  <p>Screws and location of the module in the Ford Mondeo MK4:</p>
+  <img width="100%" src="https://file.garden/aSn8DvQ-tgO2sRN7/sergio/mondeo_mk4.webp">
+
+  <h2 id="updating">Updating the module</h2>
+  <p>The module is updatable, which improve Bluetooth audio quality and range, and adds support for sending music via USB (iPod or USB stick).</p>
+  <p>The steps are as is:</p>
+  <ol>
+    <li>Download <a target="_blank" href="http://willtaylor.org/wp-content/uploads/2016/04/ford_audio_update.zip">this zip file</a>, which contains the Bluetooth firmware and voice control files in seven European languages.</li>
+    <li>Extract all the files to the root folder of a USB drive. The USB drive must be empty and formatted in FAT32 (it probably already is).</li>
+    <li>In the car, turn on the radio without turning the ignition on. Then, insert the USB drive into the USB port.</li>
+    <li>Turn the ignition key to position II (but do not start the engine; simply turn the ignition on). For keyless start: press the Ford Power button without pressing the brake or clutch pedals.</li>
+    <li>You should now see the message "Update in progress… Please wait!". This usually takes around 12 minutes.</li>
+  </ol>
+  <p>Once the update is complete, the screen will display "Update completed successfully." Once completed, the radio will return to the station it was playing before the update.</p>
+
+  <h2 id="refs">References</h2>
+  <ul>
+    <li>Ford Audio Bluetooth / USB firmware update - November 2012 release. (<i><a target="_blank" href="http://willtaylor.org/wp-content/uploads/2016/04/ford_audio_update.zip">http://willtaylor.org/wp-content/uploads/2016/04/ford_audio_update.zip</a></i>)</li>
+    <li>Bluetooth Module Variants. (<i><a target="_blank" href="https://mk4-wiki.denkdose.de/artikel/sound_connect/varianten">https://mk4-wiki.denkdose.de/artikel/sound_connect/varianten</a></i>)</li>
+    <li>Ford Audio Bluetooth / USB firmware update - November 2012 release - How to update (<i><a target="_blank" href="https://digiex.net/threads/ford-audio-bluetooth-usb-firmware-update-november-2012-release-how-to-update.14009/">https://digiex.net/threads/ford-audio-bluetooth-usb-firmware-update-november-2012-release-how-to-update.14009/</a></i>)</li>
+  </ol>
+
+  <footer>
+    <hr class="foot">
+    <p><a href="/">home</a> | <a href="/archive">archive</a></p>
+  </footer>
+</body>
+</html>
