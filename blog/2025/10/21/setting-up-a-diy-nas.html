@@ -34,7 +34,7 @@
   <h3>Even a USB on a router would make the job</h3>
   <p>Even that would be alright, but I just wanted a little bit more speed for the NAS. Also, my router doesn't even support SMB2+ and it requires authentication, and those are two requirements for me. So, option not valid.</p>
   <p>After some research I ended up with the most simple idea; running a Windows PC to use it as a NAS. I was already kind of using this feature on my main PC to grab files from it to my phone using SMB, via sharing my userprofile folder to the network... but didn't want to leave my main pc always on, or ready to wake with WoL.</p>
-  <img class="noradius" src="https://file.garden/aSn8DvQ-tgO2sRN7/sergio/nasdesktop.png">
+  <img class="noradius" src="https://ac.bbjprojek.org:444/assets/sergio/nasdesktop.png">
 
   <h2>The setup</h2>
   <p>So the setup of my "NAS", if we can call it that way, was pretty easy, with more than enough hardware for the usage. It's a mini PC with an Intel Core I5-6500T and 8GB of RAM with two NVMe drives.</p>
@@ -57,13 +57,13 @@ Set-SmbServerConfiguration -RequireSecuritySignature $false</code></pre>
 
   <p>More info: <a target="_blank" href="https://learn.microsoft.com/en-us/windows-server/storage/file-server/smb-signing?tabs=powershell">https://learn.microsoft.com/en-us/windows-server/storage/file-server/smb-signing?tabs=powershell</a></p>
   <p>When sharing the folder over the network, make sure to add the "Guest" user read/write permissions.</p>
-  <img class="noradius" src="https://file.garden/aSn8DvQ-tgO2sRN7/sergio/folderperm.png">
+  <img class="noradius" src="https://ac.bbjprojek.org:444/assets/sergio/folderperm.png">
   <p><i>Folder permission we want to share over the NAS.</i></p>
 
   <h2>Done</h2>
   <p>I was surprised on how good this works. I mapped the network drive on my main PC so the NAS acts like a regular disk, being it as fast as any other drive on it (only limited via the 1gbps ethernet).</p>
   <p>Also, on Android phone using Solid Explorer, and on iPhone using OwlFiles, the acess to the NAS is very intuitive and fast. VLC for mobile even support network discovering so I can watch films stored on NAS directly on my phone. Chef kiss!</p>
-  <img class="noradius" src="https://file.garden/aSn8DvQ-tgO2sRN7/sergio/netdrive.png">
+  <img class="noradius" src="https://ac.bbjprojek.org:444/assets/sergio/netdrive.png">
   <p><i>Mapped network drive on Windows 10.</i></p>
 
   <footer>
